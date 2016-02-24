@@ -70,9 +70,10 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="nameLabel" destination="uDf-SK-1EX" id="gM0-QU-KOM"/>
+                <outlet property="indicatorBtn" destination="Ab6-mc-yvr" id="WI4-c2-EbD"/>
+                <outlet property="nameLabel" destination="uDf-SK-1EX" id="kSB-Pb-mfK"/>
             </connections>
-            <point key="canvasLocation" x="100.5" y="186"/>
+            <point key="canvasLocation" x="181.5" y="168"/>
         </tableViewCell>
     </objects>
     <resources>
