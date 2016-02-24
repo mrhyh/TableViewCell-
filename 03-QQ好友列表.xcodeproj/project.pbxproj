@@ -26,8 +26,8 @@
 		08FD755418ECF3BB0040B095 /* MJFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FD755318ECF3BB0040B095 /* MJFriend.m */; };
 		08FD755718ECF4240040B095 /* MJFriendGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FD755618ECF4240040B095 /* MJFriendGroup.m */; };
 		08FD755A18ED01FD0040B095 /* MJHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FD755918ED01FD0040B095 /* MJHeaderView.m */; };
+		EB1172091C7DF78D0071BCC7 /* MJFriendCell2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1172081C7DF78D0071BCC7 /* MJFriendCell2TableViewCell.xib */; };
 		EB65EFC91C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB65EFC71C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.m */; };
-		EB65EFCA1C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB65EFC81C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +69,9 @@
 		08FD755618ECF4240040B095 /* MJFriendGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFriendGroup.m; sourceTree = "<group>"; };
 		08FD755818ED01FD0040B095 /* MJHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJHeaderView.h; sourceTree = "<group>"; };
 		08FD755918ED01FD0040B095 /* MJHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJHeaderView.m; sourceTree = "<group>"; };
+		EB1172081C7DF78D0071BCC7 /* MJFriendCell2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJFriendCell2TableViewCell.xib; sourceTree = "<group>"; };
 		EB65EFC61C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFriendCell2TableViewCell.h; sourceTree = "<group>"; };
 		EB65EFC71C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFriendCell2TableViewCell.m; sourceTree = "<group>"; };
-		EB65EFC81C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJFriendCell2TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 				088E04CD18ED120E000136DF /* MJFriendCell.m */,
 				EB65EFC61C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.h */,
 				EB65EFC71C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.m */,
-				EB65EFC81C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.xib */,
+				EB1172081C7DF78D0071BCC7 /* MJFriendCell2TableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MJ;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = itcast;
 				TargetAttributes = {
 					08FD753818ECF2F40040B095 = {
@@ -303,7 +303,7 @@
 				08FD753418ECF2F30040B095 /* Images.xcassets in Resources */,
 				08FD752618ECF2F30040B095 /* InfoPlist.strings in Resources */,
 				08FD755118ECF32B0040B095 /* friends.plist in Resources */,
-				EB65EFCA1C7ABBE000D90DF9 /* MJFriendCell2TableViewCell.xib in Resources */,
+				EB1172091C7DF78D0071BCC7 /* MJFriendCell2TableViewCell.xib in Resources */,
 				08FD752F18ECF2F30040B095 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +398,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -458,6 +459,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "03-QQ好友列表/03-QQ好友列表-Prefix.pch";
 				INFOPLIST_FILE = "03-QQ好友列表/03-QQ好友列表-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.itcast.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -471,6 +473,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "03-QQ好友列表/03-QQ好友列表-Prefix.pch";
 				INFOPLIST_FILE = "03-QQ好友列表/03-QQ好友列表-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.itcast.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -492,6 +495,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "03-QQ好友列表Tests/03-QQ好友列表Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.itcast.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -510,6 +514,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "03-QQ好友列表/03-QQ好友列表-Prefix.pch";
 				INFOPLIST_FILE = "03-QQ好友列表Tests/03-QQ好友列表Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.itcast.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
