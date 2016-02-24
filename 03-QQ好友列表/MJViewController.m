@@ -10,7 +10,6 @@
 #import "MJFriendGroup.h"
 #import "MJFriend.h"
 #import "MJHeaderView.h"
-//#import "MJFriendCell.h"
 #import "MJFriendCell2TableViewCell.h"
 
 @interface MJViewController () <MJHeaderViewDelegate>
@@ -24,9 +23,9 @@
     [super viewDidLoad];
     
     // 每一行cell的高度
-    self.tableView.rowHeight = 50;
+    self.tableView.rowHeight = 42;
     // 每一组头部控件的高度
-    self.tableView.sectionHeaderHeight = 44;
+    self.tableView.sectionHeaderHeight = 42;
 }
 
 - (NSArray *)groups
@@ -67,7 +66,7 @@
 {
     // 1.创建cell
     MJFriendCell2TableViewCell *cell = [MJFriendCell2TableViewCell cellWithTableView:tableView];
-    
+    cell.indicatorBtn.tag = indexPath.row;
     // 2.设置cell的数据
     MJFriendGroup *group = self.groups[indexPath.section];
     cell.friendData = group.friends[indexPath.row];
@@ -81,7 +80,9 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     // 1.创建头部控件
-    MJHeaderView *header = [MJHeaderView headerViewWithTableView:tableView];
+    MJHeaderView *header = [MJHeaderView headerViewWithTableView:tableView identifierWithString:[NSString stringWithFormat:@"identifier%ld",(long)section]];
+    header.tag = section;
+    header.indicatorBtn.tag = section;
     header.delegate = self;
     
     // 2.给header设置数据(给header传递模型)

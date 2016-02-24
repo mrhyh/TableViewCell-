@@ -17,6 +17,9 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
+//    if(selected == YES){
+//        [_indicatorBtn setImage:[UIImage imageNamed:@"success"] forState:UIControlStateSelected];
+//    }
     // Configure the view for the selected state
 }
 
@@ -33,19 +36,26 @@
     return cell;
 }
 
-- (void)setFriendData:(MJFriend *)friendData
-{
+- (void)setFriendData:(MJFriend *)friendData{
+    
     _friendData = friendData;
     [_indicatorBtn.imageView setImage:[UIImage imageNamed:friendData.icon]];
     _nameLabel.text = friendData.name;
     _nameLabel.textColor = friendData.isVip ? [UIColor redColor] : [UIColor blackColor];
-    //self.detailTextLabel.text = friendData.intro;
+    [_indicatorBtn setImage:[UIImage imageNamed:@"code"] forState:UIControlStateNormal];
+    [_indicatorBtn setImage:[UIImage imageNamed:@"success"] forState:UIControlStateSelected];
 }
 
 - (void)setNameLabel:(UILabel *)nameLabel{
     _nameLabel = nameLabel;
 }
 
-- (IBAction)indicatorBtn:(id)sender {
+- (void)setIndicatorBtn:(UIButton *)indicatorBtn{
+    _indicatorBtn = indicatorBtn;
+}
+
+- (IBAction)indicatorBtn:(UIButton *)sender {
+    NSLog(@"indicatorBtn...%ld",(long)sender.tag);
+    sender.selected = !sender.selected;
 }
 @end

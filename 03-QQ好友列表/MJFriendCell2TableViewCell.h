@@ -20,5 +20,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *indicatorBtn;
 
 
-- (IBAction)indicatorBtn:(id)sender;
+- (IBAction)indicatorBtn:(UIButton *)sender;
 @end

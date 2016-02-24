@@ -12,14 +12,19 @@
 
 
 @protocol MJHeaderViewDelegate <NSObject>
+
 @optional
+
 - (void)headerViewDidClickedNameView:(MJHeaderView *)headerView;
+
 @end
 
 @interface MJHeaderView : UITableViewHeaderFooterView
-+ (instancetype)headerViewWithTableView:(UITableView *)tableView;
+
++ (instancetype)headerViewWithTableView:(UITableView *)tableView identifierWithString:(NSString *)identifier;
 
 @property (nonatomic, strong) MJFriendGroup *group;
+@property (nonatomic, strong) UIButton *indicatorBtn;
 
 @property (nonatomic, weak) id<MJHeaderViewDelegate> delegate;
 
