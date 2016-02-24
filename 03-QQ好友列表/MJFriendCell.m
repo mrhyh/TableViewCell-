@@ -19,8 +19,6 @@
         cell = [[MJFriendCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
     
-
-    
     return cell;
 }
 

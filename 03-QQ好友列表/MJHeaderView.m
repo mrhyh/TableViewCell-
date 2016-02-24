@@ -54,9 +54,11 @@
         // 1.添加按钮
          _indicatorBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_indicatorBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        
         // 背景图片
         [_indicatorBtn setBackgroundImage:[UIImage imageNamed:@"buddy_header_bg"] forState:UIControlStateNormal];
         [_indicatorBtn setBackgroundImage:[UIImage imageNamed:@"buddy_header_bg_highlighted"] forState:UIControlStateHighlighted];
+        
         // 设置按钮内部的左边箭头图片
         [_indicatorBtn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
         [_indicatorBtn setImage:[UIImage imageNamed:@"arrow-down"] forState:UIControlStateSelected];
