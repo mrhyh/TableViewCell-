@@ -26,6 +26,9 @@
     self.tableView.rowHeight = 42;
     // 每一组头部控件的高度
     self.tableView.sectionHeaderHeight = 42;
+    self.tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width, 500);
+    //添加footView可以去掉尾部空白的cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (NSArray *)groups
